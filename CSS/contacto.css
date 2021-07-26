@@ -1,0 +1,112 @@
+/*******************CONFIGURANDO CONTACTO**************/
+form{
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    width: 30%;
+    height: 60%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    /*PARA PONER COLOR AL BORDE SE USA box-shadow: */
+    box-shadow: #040255cc 1px 1px 10px;
+    
+    
+}
+
+input, textarea{
+    border: none;
+    resize: none;
+    outline: none;
+    padding: 15px 0px;
+    width: 80%;
+    margin: 20px;
+    transition: all 300ms;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+/*PARA CAMBIAR DE COLOR A LAS LINEAS A LA HORA DE INGRESAR DATOS*/
+input:focus, textarea:focus{
+    border-bottom-color: rgba(255,0,255,0.5);
+}
+
+/*
+.perfil-btn{
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    border: none;
+    font-size: 20px;
+    AGREGAR  PADDING PARA DAR ESPACIOS DE HOLGURA AL TEXTO  QUE ESTÁ EN NUESTRO BOTON( PARA ESO USAMOS em
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    cursor: pointer;
+} */
+
+
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(0,0,0,0.9) 0px 0px 10px;
+
+}
+
+/*
+.container button{
+    color: rgb(255, 255, 255);
+    font-size: 0.5cm;
+    background-color: var(--primary-color);   
+} */
+
+.container button{
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    border: none;
+    font-size: 20px;
+    /*AGREGAR  PADDING PARA DAR ESPACIOS DE HOLGURA AL TEXTO  QUE ESTÁ EN NUESTRO BOTON( PARA ESO USAMOS em*/
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    cursor: pointer;   
+} 
+
+
+
+
+
+/*PARA INGRESAR LETRA A COLORES EN NUESTRO INPUT y TAMAÑO DE LETRA*/
+#nombres{
+    color: rgb(1, 14, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5cm;
+    
+}
+
+#correos{
+    color: rgb(1, 14, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5cm;
+    
+}
+
+#telef{
+    color: rgb(1, 14, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5cm;
+    
+}
+
+#mensaj{
+    color: rgb(1, 14, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5cm;
+    
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /*background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(255,0,255,0.5)), 
+    color-stop(17%, rgba(255,0,255,0.5)), color-stop(58%, rgba(176,0,176,0.5)), color-stop(100%, rgba(97,0,97,0.5))); */
+    justify-content: center;
+    align-items: center;
+}

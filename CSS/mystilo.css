@@ -1,0 +1,80 @@
+
+/*root  , es la  raiz  principal  de  nuestro documento html*/
+:root {
+    /*DEFINIMOS  LAS VARIABLES PARA LOS  COLORES, LO BUENO DE USAR  LAS  VARIABLES  PARA NUESTROS COLORES ,
+    ES QUE SI LUEGO NECESITAMOS CAMBIAR DE  COLOR EN TODOS LOS PUNTOS DONDE ESTÉ NUESTRO VARIABLE SE  CAMBIARÁ  DE  COLOR*/
+   
+    /*LOS  COLORES  QUE VA TENER EN NUESTRA PÁGINA*/
+    --theme-color: white;
+    --primary-color:#124f88;
+    --secundary-color:#F7C331;
+    --text-color-inverse: white;
+    --text-color:black;
+    --navbar-shallow-color:#e5e5e5;
+    --menu-mobile-background-color:#3A4460;
+}
+
+
+
+
+
+/*PARA  SUAVISAR EL SCROLL*/
+html {
+    scroll-behavior: smooth;
+
+}
+
+/*PARA  QUE LA CABECERA NO SE SUPERPONGA AL HACER EL SCROLL*/
+section[id] {
+    scroll-margin-top: 70px;
+}
+
+body {
+    /*AÑADIMOS LA FUENTE DE TEXTO*/
+    font-family: 'Montserrat', sans-serif;
+    /*HACEMOS LLAMADO A NUESTRA VARIABLE --THEME-COLOR PARA USAR  EL COLOR*/
+    background-color: var(--theme-color);
+    /*INVOCAMOS  QUE EL COLOR DE TEXTO EN NUESTRO BODY SERÁ DE  MANERA GENERAL: text-color*/
+    color: var(--text-color);
+    /*PARA DAR ESPACIADO DE PERFIL DE  MI ENCABEZADO*/
+    /*padding-top: 70px;*/
+}
+
+/*LOS  ENLACES*/
+a {
+    /*PARA  ELIMINAR  LA LINEAS DEBAJO DE LOS TEXTOS  SE  USA EL SIGUIENTE CÓDIGO*/
+    text-decoration: none;
+    /*PARA CAMBIAR A  COLOR NEGRO A NUESTROS ENLACES*/
+    color: var(--text-color);
+  }
+
+/*BOTON CERRAR*/
+.icon-cross{
+font-size: 30px;
+}
+
+.horizontal-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*PARA DISPOSITIVOS DE ESCRITORIO*/
+@media (min-width: 950px) {
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding{
+        padding-left: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+
+  

@@ -1,0 +1,120 @@
+
+/*AGREGAMOS LA FUENTE  PARA  NUETRO PERFIL , DE  GOOLGE FONT, Bold 700*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+
+/*PARA  QUE ESTÉ  SEPARADO DE LA IMAGEN , MARGEN INFERIOR*/
+.perfil_info{
+    margin-bottom: 25px;
+
+}
+
+.perfil-img{
+    width: 80%;
+    max-width: 300px;
+}
+
+.perfil-img-section{
+    position: relative;
+
+}
+
+
+/*AÑADIMOS  LINEA BAJA EN NUESTRO FOTO DE PERFIL*/
+.perfil-img-line{
+    background-color: var(--secundary-color);
+    height: 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+
+}
+
+.perfil{
+    text-align: center;
+}
+
+.perfil-titulo{
+    font-size: 35px;
+    /*INTENSIDAD DEL TEXTO, RESALTADO*/
+    font-weight: bold;
+    margin: 0;
+    color: var(--primary-color);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.perfil_detalle{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    max-width: 450px;
+    /*DAR  ESPACIADO DEL ENCABEZADO*/
+    margin: 20PX auto;
+}
+
+/* DAR COLOR  A NUESTRO BOTON,...*/
+.perfil-btn{
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    border: none;
+    font-size: 20px;
+    /*AGREGAR  PADDING PARA DAR ESPACIOS DE HOLGURA AL TEXTO  QUE ESTÁ EN NUESTRO BOTON( PARA ESO USAMOS em*/
+    padding: 0.5em 1em;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/*PARA  AGREGAR  EFECTO, OPACIDAD, BRILLO A NUESTRO BOTON USAMOS EL SIGUIENTE CÓDIGO*/
+.perfil-btn:hover {
+    filter: brightness(140%);
+}
+
+
+
+
+/*CONFIGURANDO PARA DISPOSITIVOS DE ESCRITORIO*/
+@media (min-width: 950px) {
+  /*PARA  QUE ESTÉ  SEPARADO DE LA IMAGEN , MARGEN INFERIOR*/
+.perfil_info{
+    margin-bottom: 0px;
+
+}
+
+.perfil-img{
+    width: 100%;
+    max-width: 350px;
+    /*PARA CAMBIAR LA IMAGEN LA VISTA  DE  FORMA HORIZAONTAL MIRANDO HACIA LA IZQUIERDA*/
+    transform: scaleX(-1);
+
+}
+
+.perfil{
+    text-align: justify;
+    /*PARA  PONER DE  MANERA HORIZONTAL NUESTRA IMAGEN Y TETO DE PERFIL*/
+    display: flex;
+    justify-content: space-between;
+    max-width: 980px;
+    margin: 0 auto;
+    /*PARA JUNTAR  LA  LINEA BAJA CON NUESTRA FOTO DE PERFIL*/
+    align-items: center;
+
+}
+
+.perfil-titulo{
+    font-size: 60px;
+}
+
+
+.perfil_detalle{
+    font-size: 25px;
+    /*DAR  ESPACIADO DEL ENCABEZADO*/
+    margin: 30PX 0;
+}
+
+/* DAR COLOR  A NUESTRO BOTON,...*/
+.perfil-btn{
+    font-size: 28px;
+  }
+ 
+}

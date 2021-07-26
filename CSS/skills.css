@@ -1,0 +1,52 @@
+
+.skills{
+    /*PARA EVITAR QUE A MAYOY  CANTIDAD DE LISTA DE HABILIDADES , SE PONGAN TODOS EN LA LISTA HORIZONTAL*/
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.skills-title{
+    font-size: 30px;
+    font-weight: bold;
+    /*PARA PONER  A MAYUSCULAS*/
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*SEGUIMOS AGREGANDO STILOS  A LA LISTA DE HABILIDADES*/
+.skills-skill{
+    font-size: 20px;
+    font-weight: 500;
+    /*BOX  SHADO, SOMBRA  QUE  VA TENER EL TEXTO CON SU CUADRO, ESO SE LOGRA CON 0 4PX*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 42px;
+    padding: 0.5em 0.7em;
+    margin: 10px;
+
+}
+
+.skills-list{
+    /*PARA QUITAR LA VIÑETAS*/
+    list-style: none;
+    padding: 0;
+    /*PARA DISTRIBUIR EN EL EJE HORIZONTAL*/
+    display: flex;
+    /*PARA AGRUPAR LA LISTA  DE  HABILIDADES*/
+    flex-wrap: wrap;
+    /*PARA CENTRAR EL CONTENIDO DE LA LISTA DE HABILIDADES*/
+    justify-content: center;
+}
+
+/*PARA CONFIGURAR EN DISPOSITIVOS DE ESCRITORIO y   QUE  LA LISTA DE HABIIDADES SE VEA MAS GRANDE*/
+@media(min-width:950PX){
+    .skills-title{
+        font-size: 50px;
+    }
+    
+    /*SEGUIMOS AGREGANDO STILOS  A LA LISTA DE HABILIDADES*/
+    .skills-skill{
+        font-size: 20px;
+        margin: 20px;
+    
+    }
+}

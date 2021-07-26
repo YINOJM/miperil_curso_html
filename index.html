@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Jara</title>
+    <link rel="stylesheet" href="CSS/mystilo.css">
+
+    <link rel="stylesheet" href="CSS/navbar.css">
+
+    <!--AÑADIMOS  LA LIBRERIA NORMALIZE, ESTO SIRVE  PARA QUE LOS NAVEGADORES NO CAMBIEN NUESTRA  CODIFICACION
+    , NUESTRO CSS SE VERÁ  IGUAL EN TODOS LOS VAVEGADORES DE MANERA ESTÁDAR-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css" />
+
+    <!--AÑADIMOS NUESTRA FUENTE DE TEXTO-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--PARA  AGREGAR NUESTRA FUENTE DE  ÍCONOS - OTRO ESTILO CSS-->
+    <link rel="stylesheet" href="fonts/style.css">
+
+    <!--PARA VINCULAR A NUESTRO JAVA SCRIP, CABE  PRECISAR QUE  EL ELEMENTO DEFER ES PARA 
+        DIFERIR  HASTA QUE  SE  HAYA  CARGADO  EL CONTENIDO-->
+    <script defer src="JS/app.js"></script>
+
+    <!--VINCULAMOS A NUESTRO CSS perfil-->
+    <link rel="stylesheet" href="CSS/perfil.css">
+    <!--AGREGAR FUENTE PARA LISTAR HABILIDADES-->
+    <link rel="stylesheet" href="CSS/skills.css">
+
+    <!--VINCULAMOS A EXPERIENCIA-->
+    <link rel="stylesheet" href="CSS/experiencias.css">
+
+    <!--VINCULAMOS A CONTACTO-->
+    <link rel="stylesheet" href="CSS/contacto.css">
+
+
+</head>
+
+
+<body>
+    <header class="cabecera">
+        <nav class="barranavegacion">
+            <!--NUESTRA BARRA  DE NAVEGACION-->
+            <a href="#" class="Logo">
+                <img src="IMAGENES/omar.jpg" height="50" width="50" alt="programador" />
+
+                <div>Omar Jara</div>
+            </a>
+
+            <!--PARA QUE SE ADAPTE  A NUESTRO MOBILE, LOS  MENUS - boton abrir menú-->
+            <button class="open-menu" aria-label="Abrir menú">
+                <img src="IMAGENES/menu-icon.svg" width="45px" height="46px" alt="abrir menú" />
+            </button>
+
+            <Ul class="menu">
+                <!--BOTON CERRAR-->
+                <button class="icon-cross" aria-label="cerrar menú"></button>
+
+                <li><a href="#profile" class="selected">Perfil</a></li>
+                <li><a href="#experience">Experiencia</a></li>
+                <li><a href="#habilitis">Habilidades</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </Ul>
+
+            <!--CREANDO NUESTRO MENÚ-->
+        </nav>
+
+    </header>
+
+    <div class="horizontal-padding vertical-padding">
+        <section class="perfil" id="profile">
+            <div class="perfil_info"> <br> <br> <br> <br>
+                <h1 class="perfil-titulo">Hola, Soy <br />Omar Jara </h1>
+                <p class="perfil_detalle">
+                    Soy un emprendedor dedicado al rubro de bienes raices, con más de 3 años de experiencia
+                    desarrollando proyectos
+                    inmobiliarios, remates judiciales y especialista en compra antes de remates judiciales .
+                </p>
+                <!--AGREGAR NUESTRO BOTON DESCARGAR-->
+                <button class="perfil-btn">Descargar CV</button>
+            </div>
+            <!--SE USA SPAN PARA  QUE LA LINEA AMARILLA QUE AL TAMAÑO DE LA BASE DE LA IMAGEN DE PERFIL-->
+            <span class="perfil-img-section">
+                <img class="perfil-img" src="IMAGENES/foto_perfil.png" alt="desarrollador" />
+                <!--AGREGAREMOS UNA LINEA BAJA EN NUESTRO FOTO DE PERFIL-->
+                <div class="perfil-img-line"></div>
+            </span>
+        </section>
+    </div>
+
+
+    <!--CONFIGURAMOS  LA EXPERIENCIA-->
+    <section class="experiencias" id="experience">
+        <img src="IMAGENES/wave.svg" alt="división" class="wave">
+        <!--ENTRE ESTAS IMAGENES INGRESAREMOS EL CONTENIDO DE LA EXPERIENCIA-->
+        <div class="experiencias-body">
+            <h2 class="experiencias-title">Experiencia</h2>
+            <!--AGREGAMOS  LA GRILLA-->
+            <div class="experiencias-grid">
+                <!--PARA  AGREGAR ESPACIO Y LINEA-->
+                <div class="empty"></div>
+                <div class="line"></div>
+
+                <div class="experiencia">
+                    <div class="experiencia-date">2017-2018</div>
+                    <div class="experiencia-empresa">CETIS GROUP</div>
+                    <div class="experiencia-cargo">Consultor Senior</div>
+                    <div class="experiencia-descripcion">
+                        Primera fase de Establecimiento para la Implementación de la NTP ISO/IEC 27001:2014 
+                        en la Municipalidad Distrital de Independencia.Implementación de 
+                        la NTP ISO/IEC 27001:2014 en la Municipalidad Distrital de Carabayllo. 
+                    </div>
+                </div> 
+
+                <!--LA CLASE EXPERIENCIA_ right ES PARA ALINEAR EL TEXTO  A LA DERECHA-->
+                <div class="experiencia experiencia_right">
+                    <div class="experiencia-date">2018-2020</div>
+                    <div class="experiencia-empresa">CYH SOLUTIONS</div>
+                    <div class="experiencia-cargo">Consultor Senior</div>
+                    <div class="experiencia-descripcion">
+                        Primera fase de Establecimiento para la Implementación de la NTP ISO/IEC 27001:2014 
+                        en la Municipalidad Distrital de Independencia.Implementación de 
+                        la NTP ISO/IEC 27001:2014 en la Municipalidad Distrital de Carabayllo. 
+                    </div>
+                </div>
+
+                 <!--PARA  AGREGAR ESPACIO EN LA LINEA, SOLO AGREGAREMOS  DISEÑO SIG SAG-->
+                 <div class="line"></div>
+                 <div class="empty"></div>
+                 <div class="empty"></div>
+                 <div class="line"></div>
+                 
+
+                <div class="experiencia">
+                    <div class="experiencia-date">2020-2021</div>
+                    <div class="experiencia-empresa">HONORATA GRUPO INMOBILIARIO</div>
+                    <div class="experiencia-cargo">Consultor Senior</div>
+                    <div class="experiencia-descripcion">
+                        Primera fase de Establecimiento para la Implementación de la NTP ISO/IEC 27001:2014 
+                        en la Municipalidad Distrital de Independencia.Implementación de 
+                        la NTP ISO/IEC 27001:2014 en la Municipalidad Distrital de Carabayllo. 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="IMAGENES/wave.svg" alt="división" class="wave-bannerinferior" />
+    </section>
+
+   
+    <!--PARA CONFIGURAR LAS HABILIDADES-->
+    <div class="horizontal-padding vertical-padding">
+        <section class="skills" id="habilitis">
+            <h2 class="skills-title">Habilidades</h2>
+            <ul class="skills-list" >
+                <li class="skills-skill">C#</li>
+                <li class="skills-skill">PhP</li>
+                <li class="skills-skill">CSS</li>
+                <li class="skills-skill">HTML</li>
+                <li class="skills-skill">JavaScript</li>
+                <li class="skills-skill">Visual Studio Code</li>
+            </ul>
+        </section>
+    </div>
+
+     <!--AGREGAMOS LA SECCION CONTACTOS
+    <section class="contact vertical-padding" id="contact">
+        <h2 class="titulo-contacto">Contacto</h2>
+    </section> -->
+
+    <div class="container">
+        
+        <form>
+            <div class="estilocontacto"><br>
+            <img src="imagenes/personas.png" width="60px" height="60" />
+            </div>
+            
+            <h1 class="animate__animated animate__bounce">Contáctenos</h1>
+                        
+            <input id="nombres" type="text" name="nombre" placeholder="&#128100; Nombre" maxlength="80">
+            <input id="correos" type="email" name="correo"placeholder="&#64; Correo electrónico" maxlength="80">
+            <input id="telef" type="text" name="telefono" placeholder="&#9743; Teléfono" maxlength="20">
+            <input id="mensaj" type="text" name="mensaje" placeholder="&#9993; Mensaje"maxlength="250">
+
+            <!-- <textarea>Mensaje</textarea>-->
+            <!--MI BOTON ENVIAR (SUBMIT)-->
+            <button> <strong>Enviar Mensaje</strong></button>
+
+            
+        </form>
+
+    </div>
+
+
+
+
+</body>
+</html>

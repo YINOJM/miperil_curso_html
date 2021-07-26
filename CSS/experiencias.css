@@ -1,0 +1,160 @@
+.experiencias{
+    /*PARA JUNTAR EL BANNER ONDA CON EL COLOR BODY*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+.experiencias-body{
+    background-color: var(--primary-color);
+    /*COLOR DEL TEXTO*/
+    color: var(--text-color-inverse);
+}
+
+.wave{
+    /*PARA QUE  OCUPE  EL ANCHO DE LA PÁGINA*/
+    width: 100%;
+    position: relative;
+    top: 2px;
+}
+
+
+.wave-bannerinferior {
+    /*PARA INVERTIR EL BANNER INFERIOR*/
+    transform: scaleY(-1);
+    /*INICIALMENTE APARECE UNA LINEA HORIZONTAL DE COLOR BLANCO, PARA OCULTAR APLICAREMOS TOP -2*/
+    top: -2px;
+}
+
+
+/* PARA DARLE ESTILOS A LAS  DIFERENTES GRUPOS DE EXPERIENCIA*/
+.experiencias-title{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 25px;
+}
+
+.experiencia-date{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--secundary-color);
+}
+
+.experiencia-empresa{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.experiencia-cargo {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.experiencia-descripcion {
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.experiencia{
+ padding: 25px;
+ /*ANCHO DEL TEXTO*/
+ max-width: 500px;
+ margin: 0 auto;
+}
+
+/* CONFIGURNDO PARA  QUE SE VEA EN DISPOSITIVOS DE ESCRITORIO*/
+/* CONFIGURNDO PARA  QUE SE VEA EN DISPOSITIVOS DE ESCRITORIO*/
+@media (min-width: 950px) {
+
+    .experiencias-title{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 25px;
+    }
+    
+    .experiencia-date{
+        font-size: 25px;
+        font-weight: bold;
+        color: var(--secundary-color);
+    }
+    
+    .experiencia-empresa{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+    
+    .experiencia-cargo {
+        font-weight: 500;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .experiencia-descripcion {
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    
+    .experiencia{
+     padding: 0px;
+    
+    }
+
+    .experiencia_right{
+        text-align: right;
+    }
+
+    .experiencias-grid{
+        display: grid;
+        /*PARA AGREGAR LA  CANTIDAD DE COLUMNAS*/
+        grid-template-columns: auto 2PX auto;
+        /*PARA SUPERPONER UNA SOBRE OTRO A LOS CÍRCULOS EN BLANCO, agregamos  gap PARA SEPARAR LA LINEA DEL ELEMENTO*/
+        gap: 20px   70px;
+        padding: 70px;
+        justify-content: center;
+
+        /*PARA  QUE EL CONTENIDO DE LAS EXPERIENCIAS COINCIDA  CON EL ANCHO DEL BODY*/
+        max-width: 980px;
+        margin: 0 auto;
+    }
+
+    /* AGREGAMOS  LINEA AL MEDIO*/
+    .line{
+        background-color: var(--text-color-inverse);
+        position: relative;
+    }
+
+    /*Agregamos  seudoelementos, ESTO SIRVE  PARA  PONER CIRCULO CON RELLENO EN LA LINEA*/
+    .line::before,
+    .line::after {
+        content: "";
+        /*AGREGAMOS EL CÍRCULO*/
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: var(--text-color-inverse);
+        border-radius: 50%;
+
+        /*AHORA VAMOS UBICAR LOS CIRCULOS EN LA LINEA, ESO LO HACEMOS CON POSITION ABSOLUTE, 
+        CON RESPECTO A LA LINEA (POSITION RELATIVE*/
+        position: absolute;
+        top: -20px;
+        left: -9px;
+       
+    }
+
+    /* PARA PONER EL ÚLTIMO CIRCULO EN LA PARTE INFERIOR DE LA LINEA */
+    .line::after{
+        top: 100%;
+        z-index: 1;
+}
+
+}

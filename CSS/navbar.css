@@ -1,0 +1,200 @@
+
+.cabecera {
+    /*PARA PONER  LA  LINEA SOMBREADA EN LA CABECERA USAMOS BOX SHADOW ( el cero representa al eje X y px  al eje Y*/
+    box-shadow: 0 4px 5px var(--navbar-shallow-color);
+    /*PARA QUE NUESTRA CABERA SEA FIJA USAMOS FIXED*/
+    position: fixed;
+    background-color: var(--theme-color);
+    left: 0;
+    top: O;
+    width: 100%;
+    /*AGREGAMOS  Z-INDEX PARA QUE  LA BARRA SUPEIOR QUEDE FIJO Y EL SCROLL NO SE SOBREPONGA*/
+    z-index: 100;
+}
+
+.barranavegacion{
+    display: flex;
+    /*PARA SEPARAR LOS ELEMENTOS DE UNA ESQUINA HA OTRA ESQUINA, SE USA  EL SIGUIENTE CÓDIGO*/
+    justify-content: space-between;
+    /*PARA DAR UN ESPACION DE LA CABECERA*/
+    padding: 10px;
+    /*PARA DEFINIR EL ALCHO DE LOS  MENUS  EN LA  CABECERA Y EVITAR  QUE SE VEAN MUY SEPARADOS EN LOS  NAVEGADORES*/
+    max-width: 980px;
+    /*PARA CENTRAR EL CONTENIDO AL CONTENEDOR */
+    margin: 0 auto;
+}
+
+.Logo{
+    display: flex;
+    /*PARA ALINEAR LOS  TEXTOS  DE MANERA HORIZONTAL( centramos  en el eje horizontal)*/
+    align-items: center;
+    font-size: 18px;
+    /*INTENSIDAD DE LA LETRA*/
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.Logo img{
+    /*PARA ONER DE FORMA CIRCULAR NUESTRO LOGO*/
+    border-radius: 50%;
+}
+
+/*HACEMOS NUESTRO MENÚ  CON FLEXBOX*/
+.menu {
+    display: flex;
+    /*PARA QUITAR LAS VIÑETAS*/
+    list-style: none;
+    /*PARA RECETEAR LOS MÁGENES*/
+    margin: 0;
+    padding: 0;
+}
+
+/*PARA SEPARAR NUESTRO LI( la cabecera)*/
+.menu li{
+    padding: 0 15px;
+}
+
+.menu a {
+    /*AÑADIMOS ESTILOS A LOS ENLACES*/
+    color: var(--text-color);
+    font-size: 18px;
+    /*INTENSIDAD DE LA LETRA*/
+    font-weight: 500;
+    /*PARA CENTAR HORIZONTALMENTE NUESTRO OPCIONES DE MENÚ*/
+    line-height: 50px;
+
+    /*PARA CONVERTIR  A MAYUSCULA A LOS  TEXTOS*/
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* CONFIGURANDO NUESTROS  MENUS PARA QUE  AL PASAR EL CURSOR CAMBIE DE COLOR (PERFIL, EXPERIENCIA, HABILIDADES Y CONTACTO) */
+.menu a::after {
+    content: "";
+    background-color: var(--secundary-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 4px;
+  
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .menu a.selected::after,
+  .menu a:hover::after {
+    opacity: 0.8;
+  }
+
+  /*COLOR DEL TEXTO DE PERFIL "OMAR JARA"*/
+  .menu a:hover {
+    color: var(--primary-color);
+  }
+
+/****************************************************/
+
+.open-menu, 
+.icon-cross{
+
+    /*PARA  OCULTAR y  QUE  NO SE VEA EN LOS DISPOSITIVOS DE ESCRITORIO*/
+    display: none;
+}
+
+.logotype {
+    display: flex;
+    justify-content: center;
+}
+
+/*CONFIGURANDO PARA MOBILE: ESTILOS PARA DISPOSITIVOS MÓBILES, ESTO  QUIERE  DECIR  QUE SI EL CELLULAR  TIENE MENOS  DE 950PX, SE ACTIVA  ESTA  CONFIGURACIÓN*/
+@media (max-width: 950px){
+
+    /*HACEMOS NUESTRO MENÚ  CON FLEXBOX, PARA QUE SE VEAN EN COLUMNAS*/
+    .menu{
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*PARA ALINEAR AL CENTRO DE LA COLUMNA*/
+        align-items: center;
+        background-color: var(--menu-mobile-background-color);
+
+        /*PARA PONER BARRAS DE DESPLAZAMIENTO EN LOS  DISPOSITIVOS MÓVILES, CUANDO SE MINIMICE LOS MENUS*/
+        overflow-y: auto;
+        /*PARA PONER  OPACIDAD:opacity: 0.5; LE  PONDREMOS CERO PARA QUE EL MENU NO SE VEA  POR  DEFECTO */
+        opacity: 0;
+        /*HASTA  EL MOMENTO A LAS OPCIONES DEL MENÚ SOLO SE LE HA REDUCIDO LA  OPACIDAD, ES  DECIR SI LE DAMOS CLICK EN UNA DE LAS 
+        OPCIONES TRANSPARENTES VA  SEGUIR  FUNCIONANDO, PARA DESACTIVAR  ESTO AGREGAREMOS  POINTER-EVENTS*/
+        pointer-events: none;
+        /*PARA AÑADIR UNA TRANSICION AL HACER CLICK EN CERRAR O ABRIR*/
+        transition: opacity 0.3s;
+    }
+    
+    /*PARA SEPARAR NUESTRO LI( la cabecera)*/
+    .menu li{
+        padding: 0;
+    }
+    
+    .menu a {
+        /*AÑADIMOS ESTILOS A LOS ENLACES*/
+        color: var(--text-color-inverse);
+        /*PARA CENTAR HORIZONTALMENTE NUESTRO OPCIONES DE MENÚ*/
+        line-height: 70px;
+        font-size: 25px;
+        /*INTENSIDAD DE LA LETRA*/
+        font-weight: 500;
+        /*PARA CONVERTIR  A MAYUSCULA A LOS  TEXTOS*/
+        text-transform: uppercase;
+    
+}
+
+.open-menu, 
+.icon-cross{
+
+    /*PARA  QUE SE VEA LA OPCION CERRAR  EN DISPOSITIVOS MOVILES*/
+    display: block;
+    /*PARA  QUITAR LOS  ESTILOS DEL BOTON(VALE DECIR EL FONDO BLANCO QUE APARECE*/
+    border: none;
+    background: none;
+    /*PARA PONER  CURSOR A LA OPCION CERRAR*/
+    cursor: pointer;
+}
+
+.icon-cross{
+    color: white;
+    /*PARA ALINEAR EN LA  PARTE SUPERIOR DERECHA(ESQUINA)*/
+    align-self: flex-end;
+    /*PARA CENTRAR LA OPCION MENUS  CON RESPECTO A CERRAR*/
+    padding: 20px 23px;
+    /*TAMAÑO DE LA  X (CERRAR)*/
+    font-size: 32px;
+}
+
+/*CONFIGUARAMOS  PARA  QUE AL DARLE CLICK  EN MENU SE  DESPLEGUE LAS OPCIONES*/
+.menu_abrir {
+    opacity: 1;
+/*ACTIVAMOS EL CURSOR(POINTER)*/
+pointer-events: all;
+}
+
+/*PARA QUE  NO APARESCA BORDE  AL ACERCAR EL MOSE A MENU*/
+.open-menu:focus:not(:focus-visible),
+.icon-cross:focus:not(:focus-visible){
+outline: none;
+ }
+
+ .menu a::after {
+     content: none;
+ }
+
+
+
+ /*PARA CAMBIAR DE COLOR  A LA LISTA DE HABILIDADES, EL COLOR CAMBIA AL PASAR EL PUNTERO SOBRE  EL TEXTO*/
+.menu a:hover,
+.menu a.selected {
+    color: var(--secundary-color);
+  }
+}
+
